@@ -33,6 +33,9 @@ public abstract class Carta implements Cloneable {
     estado= EstadoCarta.BOCA_ABAJO;
     }
     }
+    public void emparejar() {
+    estado = EstadoCarta.EMPAREJADA;
+    }
     
      public boolean estaEmparejada() {
         return estado == EstadoCarta.EMPAREJADA;

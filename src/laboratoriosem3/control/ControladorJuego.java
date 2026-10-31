@@ -76,7 +76,7 @@ public class ControladorJuego extends ControlPartida{
         return c1.esPareja(c2);
     }
     
-    public int seleccionarCarta(int posicion){
+    public int seleccionarCarta(int posicion) throws PosicionInvalidaException, SeleccionInvalidaException{
         if (terminada || bloqueado){
             return 0;
         } 
@@ -113,7 +113,7 @@ public class ControladorJuego extends ControlPartida{
           return 3;
     }
     
-    public void resolverFallo(){
+    public void resolverFallo() throws PosicionInvalidaException{
          if (!bloqueado||primera==-1||segunda==-1){
              return;
          }
