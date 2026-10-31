@@ -9,6 +9,11 @@ package laboratoriosem3.control;
  *
  * @author sergio
  */
+import laboratoriosem3.Modelo.Carta;
+import laboratoriosem3.Modelo.Jugador;
+import laboratoriosem3.Modelo.Tablero;
+import Exceptions.PosicionInvalidaException;
+import Exceptions.SeleccionInvalidaException;
 public class ControladorJuego extends ControlPartida{
     private Jugador[]jugadores;
     private Tablero tablero;
@@ -39,7 +44,7 @@ public class ControladorJuego extends ControlPartida{
         jugadores[0]=new Jugador(nombre1.trim());
         jugadores[1]=new Jugador(nombre2.trim());
         
-        tablero.prepararTablero();
+        tablero.reiniciar();
         
         turno=0;
         primera=-1;
@@ -68,7 +73,7 @@ public class ControladorJuego extends ControlPartida{
     
     @Override
     public boolean verificarPareja(Carta c1, Carta c2){
-        return c1.getNombre().equals(c2.getNombre());
+        return c1.esPareja(c2);
     }
     
     public int seleccionarCarta(int posicion){
@@ -79,8 +84,10 @@ public class ControladorJuego extends ControlPartida{
             throw new IllegalArgumentException("Posicion fuera del tablero");
         }
         Carta carta = tablero.getCarta(posicion);
-        if (carta.estaDescubierta() || carta.estaEmparejada()){
-            throw new IllegalArgumentException("Esta carta no se puede seleccionar");
+        if(primera==-1){
+            tablero.validarPrimeraSeleccion(posicion);
+        }else{
+            tablero.validarSegundaSeleccion(posicion, primera);
         }
         carta.mostrar();
          if (primera==-1){
@@ -120,7 +127,7 @@ public class ControladorJuego extends ControlPartida{
     
     @Override
     public boolean finalizarPartida(){
-        return tablero.contarEmparejadas()==36;
+        return tablero.todasEmparejadas();
     }
     
     public String obtenerResultado(){
