@@ -30,7 +30,11 @@ public class PanelCarta extends JButton {
 
     private final int posicion;
     private Carta carta;
-
+    private String nombre = "";
+    private boolean visible = false;  
+    private boolean emparejada = false;
+    private boolean especial = false;
+ 
     public PanelCarta(int posicion) {
         this.posicion = posicion;
         setPreferredSize(new Dimension(95, 112));
@@ -49,7 +53,16 @@ public class PanelCarta extends JButton {
         this.carta = carta;
         repaint();
     }
-
+    
+     public void actualizar(Carta carta) {
+        this.nombre = carta.getNombre();
+        this.especial = carta.esEspecial();
+        this.emparejada = carta.estaEmparejada();
+        this.visible = !carta.estaBocaAbajo() || carta.estaEmparejada();
+        setEnabled(!emparejada);       
+        repaint();
+        
+    }
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g.create();

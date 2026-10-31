@@ -57,9 +57,11 @@ public class ControladorJuego extends ControlPartida{
     public Jugador getJugadorActual(){
         return jugadores[turno];
     }
-    public Jugador[]getJugadores(){
+    @Override
+    public Jugador[] getJugadores(){
         return jugadores;
     }
+    @Override
     public Tablero getTablero(){
         return tablero;
     }
@@ -75,7 +77,7 @@ public class ControladorJuego extends ControlPartida{
     public boolean verificarPareja(Carta c1, Carta c2){
         return c1.esPareja(c2);
     }
-    
+    @Override
     public int seleccionarCarta(int posicion) throws PosicionInvalidaException, SeleccionInvalidaException{
         if (terminada || bloqueado){
             return 0;
@@ -112,7 +114,7 @@ public class ControladorJuego extends ControlPartida{
           bloqueado=true;
           return 3;
     }
-    
+    @Override
     public void resolverFallo() throws PosicionInvalidaException{
          if (!bloqueado||primera==-1||segunda==-1){
              return;
@@ -144,10 +146,11 @@ public class ControladorJuego extends ControlPartida{
             return "Empate entre " + j1.getNombre()+ " y "+j2.getNombre()+ "Puntos: "+j1.getPuntaje();
         }
     }
-    
+    @Override
     public boolean estaBloqueado(){
         return bloqueado;
     }
+    @Override
     public boolean estaTerminada(){
         return terminada;
     }

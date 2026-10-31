@@ -19,11 +19,11 @@ public class Tablero {
     public static final int TOTAL_CARTAS = FILAS * COLUMNAS;   // 36
     public static final int TOTAL_PAREJAS = TOTAL_CARTAS / 2;  // 18
     public static final int PAREJAS_ESPECIALES = 2;
-
-    private static final String[] NOMBRES_POKEMON = {
-        "Pikachu", "Bulbasaur", "Charmander", "Squirtle", "Jigglypuff", "Meowth",
-        "Psyduck", "Eevee", "Snorlax", "Gengar", "Onix", "Magikarp",
-        "Vulpix", "Togepi", "Mewtwo", "Charizard", "Machop", "Geodude"
+    public static final String[] NOMBRES_POKEMON = {
+        "Pikachu", "Charmander", "Bulbasaur", "Squirtle", "Jigglypuff", "Meowth",
+        "Psyduck", "Gengar", "Eevee", "Snorlax", "Mewtwo", "Mew",
+        "Togepi", "Poliwag", "Magikarp", "Voltorb", "Ditto", "Oddish",
+        "Onix", "Vulpix", "Charizard", "Machop", "Geodude"
     };
 
     private final Carta[] cartas = new Carta[TOTAL_CARTAS];
