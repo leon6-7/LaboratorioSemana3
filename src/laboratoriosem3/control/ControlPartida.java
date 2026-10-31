@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package laboratoriosem3.control;
-
+import Exceptions.NombreInvalidoException;
 /**
  *
  * @author sergio
@@ -23,5 +23,14 @@ public abstract class ControlPartida {
     public abstract boolean finalizarPartida();
     
     public abstract String obtenerResultado();
+    
+    public static boolean validarNombres(String nombre1, String nombre2)throws NombreInvalidoException{
+        if(nombre1.equals(nombre2)||nombre1.isBlank()||nombre2.isBlank()){
+            throw new NombreInvalidoException("Nombres Invalidos");
+        }
+        else{
+        return true;
+        }
+    }
     
 }
