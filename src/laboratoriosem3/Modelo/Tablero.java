@@ -110,7 +110,7 @@ public class Tablero {
         if (carta.estaEmparejada()) {
             throw new SeleccionInvalidaException("Esa carta ya fue emparejada.");
         }
-        if (carta.estaBocaAbajo()) {
+        if (!carta.estaBocaAbajo()) {
             throw new SeleccionInvalidaException("Esa carta ya está descubierta.");
         }
     }

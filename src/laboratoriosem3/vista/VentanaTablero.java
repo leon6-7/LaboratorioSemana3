@@ -17,7 +17,6 @@ import laboratoriosem3.vista.PanelMarcador;
 
 public class VentanaTablero extends JFrame {
  
-    // Códigos que devuelve ControlPartida.seleccionarCarta()
     private static final int IGNORADA = 0;
     private static final int PRIMERA_CARTA = 1;
     private static final int PAREJA = 2;
@@ -163,7 +162,6 @@ public class VentanaTablero extends JFrame {
                 null, opciones, opciones[0]);
  
         if (eleccion == 0) {
-            // iniciarJuego reinicia marcadores (nuevos Jugador) y vuelve a mezclar el tablero
             control.iniciarJuego(nombres[0], nombres[1]);
             refrescar();
         } else {

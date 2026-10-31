@@ -54,15 +54,18 @@ public class PanelCarta extends JButton {
         repaint();
     }
     
-     public void actualizar(Carta carta) {
+     
+    public void actualizar(Carta carta) {
+        this.carta = carta;
         this.nombre = carta.getNombre();
         this.especial = carta.esEspecial();
         this.emparejada = carta.estaEmparejada();
         this.visible = !carta.estaBocaAbajo() || carta.estaEmparejada();
-        setEnabled(!emparejada);       
+
+        setEnabled(!emparejada);
         repaint();
-        
-    }
+}
+
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g.create();
