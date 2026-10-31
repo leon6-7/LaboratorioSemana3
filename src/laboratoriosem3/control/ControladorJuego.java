@@ -100,7 +100,7 @@ public class ControladorJuego extends ControlPartida{
           if (verificarPareja(c1, c2)){
               c1.emparejar();
               c2.emparejar();
-              getJugadorActual().sumarAcierto(c1.getPuntos());
+              getJugadorActual().parejaEncontrada(c1.getPuntos());
               primera=-1;
               segunda=-1;
                if (finalizarPartida()) {
