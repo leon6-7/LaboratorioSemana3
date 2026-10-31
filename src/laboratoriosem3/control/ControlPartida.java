@@ -9,8 +9,8 @@ package laboratoriosem3.control;
  *
  * @author sergio
  */
-import laboratoriosem3.modelo.Carta;
-import laboratoriosem3.modelo.Jugador;
+import laboratoriosem3.Modelo.Carta;
+import laboratoriosem3.Modelo.Jugador;
 public abstract class ControlPartida {
     public abstract void iniciarJuego(String nombre,String nombre2);
     
