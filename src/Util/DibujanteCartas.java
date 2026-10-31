@@ -26,7 +26,8 @@ public class DibujanteCartas {
     public static final String[] NOMBRES_SOPORTADOS = {
         "Pikachu", "Charmander", "Bulbasaur", "Squirtle", "Jigglypuff", "Meowth",
         "Psyduck", "Gengar", "Eevee", "Snorlax", "Mewtwo", "Mew",
-        "Togepi", "Poliwag", "Magikarp", "Voltorb", "Ditto", "Oddish"
+        "Togepi", "Poliwag", "Magikarp", "Voltorb", "Ditto", "Oddish",
+        "Onix", "Vulpix", "Charizard", "Machop", "Geodude"
     };
     
     private static final Color NEGRO = new Color(30, 30, 30);
@@ -128,11 +129,100 @@ public class DibujanteCartas {
             case "Voltorb" -> voltorb(g);
             case "Ditto" -> ditto(g);
             case "Oddish" -> oddish(g);
+            case "Onix" -> onix(g);
+            case "Vulpix" -> vulpix(g);
+            case "Charizard" -> charizard(g);
+            case "Machop" -> machop(g);
+            case "Geodude" -> geodude(g);
             default -> throw new DibujoCartaException("No hay dibujo para " + nombre);
         }
     }
 
 
+
+    private static void onix(Graphics2D g) {
+        Color gris = new Color(165, 165, 175);
+        rellenar(g, gris, elipse(52, 84, 14, 12));
+        rellenar(g, gris, elipse(30, 76, 20, 17));
+        rellenar(g, gris, elipse(10, 58, 24, 21));
+        rellenar(g, gris, elipse(24, 38, 28, 24));
+        rellenar(g, gris, poligono(66, 14, 72, 0, 78, 16));
+        rellenar(g, gris, elipse(44, 10, 50, 34));
+        g.setColor(NEGRO);
+        g.drawLine(58, 34, 88, 34);
+        ojoColor(g, 60, 24, 4, NEGRO);
+    }
+
+    private static void vulpix(Graphics2D g) {
+        Color rojizo = new Color(200, 95, 60);
+        Color naranja = new Color(245, 160, 80);
+        rellenar(g, naranja, elipse(4, 58, 24, 30));
+        rellenar(g, naranja, elipse(72, 58, 24, 30));
+        rellenar(g, rojizo, poligono(30, 42, 18, 10, 46, 30));
+        pintar(g, new Color(120, 50, 30), poligono(30, 34, 23, 18, 39, 30));
+        rellenar(g, rojizo, poligono(70, 42, 82, 10, 54, 30));
+        pintar(g, new Color(120, 50, 30), poligono(70, 34, 77, 18, 61, 30));
+        rellenar(g, rojizo, elipse(24, 28, 52, 50));
+        rellenar(g, naranja, elipse(40, 24, 20, 16));
+        ojoColor(g, 39, 56, 5, new Color(90, 50, 30));
+        ojoColor(g, 61, 56, 5, new Color(90, 50, 30));
+        pintar(g, NEGRO, elipse(48, 63, 4, 3));
+        sonrisa(g, 50, 69, 10);
+    }
+
+    private static void charizard(Graphics2D g) {
+        Color naranja = new Color(240, 130, 50);
+        Color ala = new Color(60, 140, 150);
+        rellenar(g, ala, poligono(36, 52, 4, 16, 14, 74));
+        rellenar(g, ala, poligono(64, 52, 96, 16, 86, 74));
+        rellenar(g, new Color(240, 70, 40), elipse(80, 72, 14, 22));
+        pintar(g, AMARILLO, elipse(84, 80, 6, 12));
+        rellenar(g, naranja, elipse(30, 56, 40, 40));
+        pintar(g, new Color(250, 225, 150), elipse(38, 66, 24, 26));
+        rellenar(g, naranja, poligono(36, 30, 30, 10, 44, 24));
+        rellenar(g, naranja, poligono(64, 30, 70, 10, 56, 24));
+        rellenar(g, naranja, elipse(28, 20, 44, 40));
+        ojos(g, 40, 60, 36, 5);
+        sonrisa(g, 50, 50, 16);
+    }
+
+    private static void machop(Graphics2D g) {
+        Color grisAzul = new Color(150, 170, 195);
+        rellenar(g, grisAzul, elipse(6, 56, 22, 18));
+        rellenar(g, grisAzul, elipse(72, 56, 22, 18));
+        rellenar(g, new Color(120, 135, 160), poligono(38, 28, 42, 8, 48, 26));
+        rellenar(g, new Color(120, 135, 160), poligono(45, 26, 50, 4, 55, 26));
+        rellenar(g, new Color(120, 135, 160), poligono(52, 26, 58, 8, 62, 28));
+        rellenar(g, grisAzul, elipse(24, 22, 52, 56));
+        ojoColor(g, 39, 48, 5, ROJO);
+        ojoColor(g, 61, 48, 5, ROJO);
+        g.setColor(NEGRO);
+        g.drawLine(32, 40, 44, 43);
+        g.drawLine(68, 40, 56, 43);
+        g.drawLine(43, 64, 57, 64);
+    }
+
+    private static void geodude(Graphics2D g) {
+        Color roca = new Color(150, 140, 120);
+        g.setColor(roca);
+        g.setStroke(new BasicStroke(9f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        g.drawLine(28, 54, 14, 48);
+        g.drawLine(72, 54, 86, 48);
+        g.setStroke(new BasicStroke(2.2f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        rellenar(g, roca, elipse(2, 30, 20, 20));
+        rellenar(g, roca, elipse(78, 30, 20, 20));
+        rellenar(g, roca, poligono(28, 30, 40, 22, 60, 22, 74, 32, 78, 54, 70, 74, 50, 80, 30, 74, 22, 54));
+        g.setColor(new Color(110, 100, 85));
+        g.drawLine(30, 64, 36, 70);
+        g.drawLine(66, 30, 70, 36);
+        ojos(g, 40, 60, 46, 4);
+        g.setColor(NEGRO);
+        g.setStroke(new BasicStroke(4f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        g.drawLine(33, 38, 46, 40);
+        g.drawLine(67, 38, 54, 40);
+        g.setStroke(new BasicStroke(2.2f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        g.drawLine(42, 62, 58, 62);
+    }
 
     private static void pikachu(Graphics2D g) {
         rellenar(g, AMARILLO, poligono(32, 40, 14, 4, 44, 30));
