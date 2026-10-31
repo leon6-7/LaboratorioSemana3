@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package laboratoriosem3.control;
+
+/**
+ *
+ * @author sergio
+ */
+import laboratoriosem3.modelo.Carta;
+import laboratoriosem3.modelo.Jugador;
+public abstract class ControlPartida {
+    public abstract void iniciarJuego(String nombre,String nombre2);
+    
+    public abstract Jugador getJugadorActual();
+    
+    public abstract void cambiarTurno();
+    
+    public abstract boolean verificarPareja(Carta c1, Carta c2);
+    
+    public abstract boolean finalizarPartida();
+    
+    public abstract String obtenerResultado();
+    
+}
