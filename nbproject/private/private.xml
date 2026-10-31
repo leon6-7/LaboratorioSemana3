@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Group 20260625-08:27:41">
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/LaboratorioSem3.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/Carta.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/EstadoCarta.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/CartaEstandar.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/CartaEspecial.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/Jugador.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/Modelo/Tablero.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/Exceptions/PosicionInvalidaException.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/Exceptions/SeleccionInvalidaException.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/Util/DibujanteCartas.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/control/ControlPartida.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/control/ControladorJuego.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/vista/PanelCarta.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/vista/PanelMarcador.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/Exceptions/NombreInvalidoException.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/Exceptions/DibujoCartaException.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/vista/VentanaTablero.java</file>
+            <file>file:/C:/Proyectos/Programacion2Q4/Laboratorios/LaboratorioSem3/src/laboratoriosem3/vista/VentanaInicio.java</file>
+        </group>
+    </open-files>
+</project-private>
